@@ -1,0 +1,27 @@
+// mobile
+@mixin mobile() {
+    @media (width <= 767px) {
+        @content;
+    }
+}
+
+// tablet
+@mixin tab() {
+    @media (768px <= width <= 1023px) {
+        @content;
+    }
+}
+
+// desktop
+@mixin desktop() {
+    @media (width >= 1024px) {
+        @content;
+    }
+}
+
+// variable
+@mixin responsive($min, $max) {
+    @media ($min <= width <= $max) {
+        @content;
+    }
+}

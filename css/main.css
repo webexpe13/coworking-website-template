@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+.static {
+  position: static;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.navbar {
+  padding: 50px 15px;
+  width: 100%;
+  background: #ffffff;
+  z-index: 10;
+}
+.navbar .nav_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo img {
+  width: 120px;
+  position: relative;
+  z-index: 2;
+}
+.navbar .nav_links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+.navbar .nav_links li {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 50px;
+}
+.navbar .nav_links li:last-child {
+  margin-right: 0;
+  color: #003CFF;
+}
+.navbar .menu_toggle {
+  width: 23px;
+  height: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  display: none;
+}
+.navbar .menu_toggle div {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: #000000;
+  top: -3px;
+  transition: all 0.3s ease;
+}
+.navbar .menu_toggle div::after {
+  content: "";
+  width: 80%;
+  height: 2px;
+  border-radius: 2px;
+  background: #000000;
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+@media (width <= 767px) {
+  .navbar {
+    padding: 15px;
+  }
+  .navbar .logo img {
+    width: 80px;
+  }
+  .navbar .nav_links {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    transform: translateY(-110%);
+    transition: all 0.3s ease-in-out;
+    background: #ffffff;
+  }
+  .navbar .nav_links li {
+    margin-bottom: 10px;
+  }
+  .navbar .nav_links li:last-child {
+    margin-bottom: 0px;
+  }
+  .navbar .menu_toggle {
+    display: block;
+  }
+}
+
+body.open-nav .menu_toggle div {
+  rotate: 135Deg;
+  top: 0;
+}
+body.open-nav .menu_toggle div::after {
+  rotate: 90Deg;
+  width: 100%;
+  top: 0;
+}
+body.open-nav .nav_links {
+  transform: translateY(30%);
+}
+
+.hero {
+  padding: 0px 15px;
+}
+
+.hero_container {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: url(/img/hero-bg.jpg);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.hero_intro {
+  width: 45%;
+  max-width: 550px;
+  padding: 60px 50px;
+  background: #ffffff;
+  position: relative;
+  top: 50px;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 60, 255, 0.25);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(0, 60, 255, 0.25);
+  box-shadow: 0px 0px 25px 0px rgba(0, 60, 255, 0.25);
+}
+.hero_intro--title {
+  font-size: 30;
+  font-weight: 700;
+  margin: 0px;
+}
+.hero_intro--subTitle {
+  font-size: 20px;
+  line-height: 36px;
+  margin-bottom: 15px;
+  margin-bottom: 30px;
+}
+.hero_intro--btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero_intro--knowMore, .hero_intro--becomeMember {
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+}
+.hero_intro--knowMore {
+  color: #003CFF;
+}
+.hero_intro--becomeMember {
+  background: #003CFF;
+  color: #ffffff;
+  padding: 14px 30px;
+}
+.hero_intro::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: solid 5px rgba(22, 137, 252, 0.5);
+  rotate: -2Deg;
+  transform: translate(20px, -30px);
+}
+
+@media (width <= 767px) {
+  .hero_container {
+    background-size: cover;
+    align-items: flex-end;
+    min-height: 70vh;
+    background-position: center right;
+  }
+  .hero_intro {
+    width: 100%;
+    padding: 40px 20px;
+    transform: translateY(50%);
+    box-shadow: none;
+  }
+  .hero_intro--title {
+    font-size: 22px;
+  }
+  .hero_intro--subTitle {
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    line-height: 24px;
+  }
+  .hero_intro--btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hero_intro--knowMore, .hero_intro--becomeMember {
+    font-size: 12px;
+  }
+  .hero_intro::after {
+    transform: translate(-5px, -10px);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
