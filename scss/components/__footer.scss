@@ -1,0 +1,144 @@
+.footer {
+  background: $blue;
+  padding: 80px 15px 30px;
+  color: $white;
+
+  &--container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &--logo {
+    margin-bottom: 35px;
+  }
+
+  &--address {
+    font-size: 16px;
+    margin-bottom: 14px;
+    margin-top: 0px;
+    line-height: 28px;
+  }
+
+  &--contact {
+    font-size: 14px;
+    span:first-child {
+      padding-right: 35px;
+    }
+  }
+
+  &-copyright {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: $gray;
+    margin-top: 100px;
+    margin-bottom: 0px;
+  }
+
+  &--nav nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li a {
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &-newsletter {
+    &--para {
+      margin: 0;
+      span {
+        font-weight: 300;
+        font-size: 14px;
+      }
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    &--inputWrapper {
+      position: relative;
+      margin-top: 25px;
+      width: 400px;
+    }
+
+    &--input {
+      border: none;
+      color: $black;
+      height: 50px;
+      width: 100%;
+      display: block;
+      font-weight: 400;
+      padding-left: 10px;
+      padding-right: 20px;
+      &::placeholder {
+        color: $gray;
+        font-weight: 300;
+        font-size: 12px;
+      }
+    }
+
+    &--submit {
+      border: none;
+      margin: 0;
+      background: transparent;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 15px;
+      cursor: pointer;
+    }
+  }
+
+  @include mobile {
+    padding: 50px 15px 30px;
+    &--container {
+      flex-wrap: wrap;
+
+      > div {
+        width: 100%;
+      }
+    }
+
+    &--nav {
+      border-top: solid 1px $gray;
+      border-bottom: solid 1px $gray;
+      width: 100%;
+      padding: 30px 0px 15px;
+      margin: 30px 0px;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          width: 50%;
+        }
+      }
+    }
+
+    &-newsletter {
+      width: 100%;
+      &--para {
+        span {
+          font-size: 12px;
+        }
+        font-size: 16px;
+      }
+
+      &--inputWrapper {
+        width: 100%;
+      }
+    }
+
+    &-copyright {
+      font-size: 12px;
+      width: 70%;
+      margin: 65px auto 0px;
+    }
+  }
+}
