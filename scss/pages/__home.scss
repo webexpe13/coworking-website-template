@@ -2,7 +2,7 @@
 .hero {
   padding: 0px 15px;
 }
-.hero_container {
+.hero-container {
   display: flex;
   align-items: center;
   min-height: 100vh;
@@ -12,7 +12,7 @@
   background-position: right;
 }
 
-.hero_intro {
+.hero-intro {
   width: 45%;
   max-width: 550px;
   padding: 60px 50px;
@@ -74,14 +74,14 @@
 }
 
 @include mobile {
-  .hero_container {
+  .hero-container {
     background-size: cover;
     align-items: flex-end;
     min-height: 70vh;
     background-position: center right;
   }
 
-  .hero_intro {
+  .hero-intro {
     width: 100%;
     padding: 40px 20px;
     transform: translateY(50%);
@@ -116,7 +116,7 @@
 }
 
 // empowering shared spaces section
-.empowering_spaces {
+.empowering-spaces {
   padding: 50px 15px;
   &--container {
     display: flex;
